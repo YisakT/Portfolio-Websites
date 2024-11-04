@@ -456,9 +456,11 @@ body {
     margin-bottom: 60px;
 }
 
-.blog .box {
+..blog .box {
     border-radius: 10px;
     background: #212222;
+    max-width: 90%; /* Adjusts the container to be slightly wider */
+    margin: 0 auto; /* Centers the box within the column */
 }
 
 .blog .box .image {
@@ -466,8 +468,12 @@ body {
 }
 
 .blog .box .image img {
-    width: 100%;
+    width: 100%; /* Fills the container width */
+    height: 250px; /* Slightly taller for moderate emphasis */
+    object-fit: cover; /* Ensures proper cropping without distortion */
+    border-radius: 10px; /* Matches the box border-radius */
 }
+
 
 .blog .box .image a {
     position: absolute;
