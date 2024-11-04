@@ -456,7 +456,7 @@ body {
     margin-bottom: 60px;
 }
 
-..blog .box {
+.blog .box {
     border-radius: 10px;
     background: #212222;
     max-width: 90%; /* Adjusts the container to be slightly wider */
