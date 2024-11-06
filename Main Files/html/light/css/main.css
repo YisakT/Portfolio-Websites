@@ -45,9 +45,10 @@ body {
 .navbar .nav-item .nav-link:hover {
     color: #ffffff;
 }
+
 .navbar .navbar-nav .dropdown .dropdown-menu {
     margin-top: 25px;
-    background:#212222;
+    background: #212222;
 }
 
 .navbar .navbar-nav .dropdown span {
@@ -206,6 +207,7 @@ body {
     margin-bottom: 30px;
     background: #212222;
 }
+
 .services .box span {
     font-size: 30px;
     color: #e0a80d;
@@ -318,7 +320,7 @@ body {
     margin-bottom: 30px;
 }
 
-.portfolio .single-portfolio-item .overlay{
+.portfolio .single-portfolio-item .overlay {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -336,10 +338,10 @@ body {
     text-decoration: none;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     color: #ffffff;
     transition: all .3s ease-in-out;
-    
+
 }
 
 .portfolio .single-portfolio-item .overlay .content h3 {
@@ -430,13 +432,13 @@ body {
 }
 
 .testimonials .icon {
-  height: 40px;
-  width: 40px;
-  background-size: 100%, 100%;
-  border-radius: 50%;
-  font-size: 30px;
-  background-image: none;
-  color: #ffffff
+    height: 40px;
+    width: 40px;
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    font-size: 30px;
+    background-image: none;
+    color: #ffffff
 }
 
 
@@ -459,8 +461,10 @@ body {
 .blog .box {
     border-radius: 10px;
     background: #212222;
-    max-width: 90%; /* Adjusts the container to be slightly wider */
-    margin: 0 auto; /* Centers the box within the column */
+    max-width: 90%;
+    /* Adjusts the container to be slightly wider */
+    margin: 0 auto;
+    /* Centers the box within the column */
 }
 
 .blog .box .image {
@@ -468,10 +472,14 @@ body {
 }
 
 .blog .box .image img {
-    width: 100%; /* Fills the container width */
-    height: 250px; /* Slightly taller for moderate emphasis */
-    object-fit: cover; /* Ensures proper cropping without distortion */
-    border-radius: 10px; /* Matches the box border-radius */
+    width: 100%;
+    /* Fills the container width */
+    height: 250px;
+    /* Slightly taller for moderate emphasis */
+    object-fit: cover;
+    /* Ensures proper cropping without distortion */
+    border-radius: 10px;
+    /* Matches the box border-radius */
 }
 
 
@@ -549,6 +557,7 @@ body {
     background: #e0a80d;
     color: #ffffff;
 }
+
 .contact .info {
     padding-left: 40px;
 }
@@ -573,7 +582,7 @@ body {
     background: #242527;
 }
 
- .footer .social-icons span{
+.footer .social-icons span {
     color: #e0a80d;
     padding: 0 5px;
 }
@@ -592,6 +601,7 @@ body {
 ========================== */
 /*Small devices (landscape phones, 576px and up) */
 @media (max-width: 575.99px) {
+
     /* Slider*/
     .slider {
         height: calc(100vh - 80px);
@@ -614,9 +624,11 @@ body {
     .about-me {
         padding: 130px 25px;
     }
+
     .about-me img {
         margin-bottom: 30px;
     }
+
     .about-me .btn-1 {
         margin-bottom: 30px;
     }
@@ -639,11 +651,11 @@ body {
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
 
-     /* Slider*/
-     .slider {
+    /* Slider*/
+    .slider {
         height: calc(100vh - 80px);
         margin-top: 80px;
-     }
+    }
 
     .slider .left-content {
         padding: 0;
@@ -704,5 +716,4 @@ body {
 
 
 /* Large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) {
-}
+@media (max-width: 1199.98px) {}
