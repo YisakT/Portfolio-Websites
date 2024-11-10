@@ -1,47 +1,41 @@
 $(function () {
-
     'use strict';
 
+    // Initialize Isotope (for filtering)
     $('#container').imagesLoaded(function () {
-
-        // filter items on button click
-        $('.filter-button-group').on('click', 'button', function () {
-            var filterValue = $(this).attr('data-filter');
-            $grid.isotope({ filter: filterValue });
-
-        });
-
         var $grid = $('.grid').isotope({
-            // options options
             itemSelector: '.grid-item',
             layoutMode: 'fitRows'
         });
 
-
-        // images have loaded
-
+        // Filter items on button click
+        $('.filter-button-group').on('click', 'button', function () {
+            var filterValue = $(this).attr('data-filter');
+            $grid.isotope({ filter: filterValue });
+        });
     });
 
-    //Image Light Box Popup
+    // Image Light Box Popup
     $('.image-link').magnificPopup({ type: 'image' });
 
-    //Counter Up
+    // Counter Up (to animate counters)
     $('.counter').counterUp({
         delay: 10,
         time: 3000
     });
 
-
-
-});
-
-document.addEventListener('DOMContentLoaded', function () {
+    // Handle form submission
     const form = document.getElementById('contactForm');
     const formStatus = document.getElementById('formStatus');
+    const submitButton = form.querySelector('button[type="submit"]'); // Grab the submit button
 
     if (form) {
         form.addEventListener('submit', async function (e) {
             e.preventDefault();
+
+            // Disable the submit button to prevent multiple submissions
+            submitButton.disabled = true;
+            formStatus.innerHTML = ''; // Clear previous status message
 
             const formData = {
                 name: document.getElementById('name').value,
@@ -59,15 +53,21 @@ document.addEventListener('DOMContentLoaded', function () {
                     body: JSON.stringify(formData),
                 });
 
+                // Re-enable the submit button after request completes
+                submitButton.disabled = false;
+
                 if (response.ok) {
                     formStatus.innerHTML = '<div class="alert alert-success">Form submitted successfully!</div>';
-                    form.reset(); // Clear the form
+                    form.reset(); // Clear the form fields
                 } else {
-                    formStatus.innerHTML = '<div class="alert alert-danger">Error submitting form. Please try again.</div>';
+                    const errorMessage = `Error: ${response.statusText} (Status code: ${response.status})`;
+                    formStatus.innerHTML = `<div class="alert alert-danger">Error submitting form. ${errorMessage}</div>`;
                 }
             } catch (error) {
                 console.error('Error:', error);
                 formStatus.innerHTML = '<div class="alert alert-danger">Error submitting form. Please try again.</div>';
+                // Re-enable the submit button if there was an error
+                submitButton.disabled = false;
             }
         });
     }
