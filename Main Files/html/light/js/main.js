@@ -24,45 +24,4 @@ $(function () {
         time: 3000
     });
 
-    // Handle form submission
-    // Handle form submission
-const form = document.getElementById('contactForm');
-const formStatus = document.getElementById('formStatus');
-
-if (form) {
-    form.addEventListener('submit', async function (e) {
-        e.preventDefault();
-
-        // Display a submitting message
-        formStatus.innerHTML = '<div class="alert alert-info">Submitting form...</div>';
-
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            subject: document.getElementById('subject').value,
-            message: document.getElementById('message').value
-        };
-
-        try {
-            const response = await fetch('https://tks9tgdsaf.execute-api.us-east-1.amazonaws.com/prod/submit-form', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
-
-            if (response.ok) {
-                const result = await response.json();
-                formStatus.innerHTML = `<div class="alert alert-success">${result.message || 'Form submitted successfully!'}</div>`;
-                form.reset(); // Clear the form fields
-            } else {
-                const errorText = await response.text();
-                formStatus.innerHTML = `<div class="alert alert-danger">Form submission failed: ${response.statusText} (Status ${response.status})<br>${errorText}</div>`;
-            }
-        } catch (error) {
-            console.error('Fetch Error:', error); // More specific error log
-            formStatus.innerHTML = '<div class="alert alert-danger">Form submission failed. Please try again.</div>';
-        }
-    });
-}
+    
