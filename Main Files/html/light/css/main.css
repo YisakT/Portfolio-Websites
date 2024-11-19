@@ -600,120 +600,166 @@ body {
    [11]. Media
 ========================== */
 /*Small devices (landscape phones, 576px and up) */
-@media (max-width: 575.99px) {
+/* Modern Responsive Design */
 
-    /* Slider*/
-    .slider {
-        height: calc(100vh - 80px);
-        margin-top: 80px;
-    }
-
-    .slider img {
-        display: none;
-    }
-
+/* General Styles for Small Screens (Phones, < 576px) */
+@media (max-width: 575.98px) {
+    /* Navbar */
     .navbar {
-        padding: 20px;
+        padding: 15px;
+        background: #2b2c2c;
+    }
+    .navbar .nav-item {
+        margin: 10px 0; /* Stack items vertically */
+        font-size: 16px; /* Larger font for readability */
     }
 
-    .animated-headlines .cd-headline span {
-        font-size: 30px;
+    /* Slider */
+    .slider {
+        height: auto; /* Automatically adjust for content */
+        padding: 20px;
+        margin-top: 50px;
+        background-position: center; /* Ensure proper background alignment */
+    }
+    .slider .animated-headlines .cd-headline span {
+        font-size: 24px;
     }
 
     /* About Me */
     .about-me {
-        padding: 130px 25px;
+        padding: 60px 20px; /* Adjust padding for smaller screens */
+        text-align: center; /* Center-align content for a clean layout */
     }
-
     .about-me img {
-        margin-bottom: 30px;
+        display: block;
+        max-width: 80%; /* Ensure the image is responsive */
+        margin: 0 auto 20px; /* Center image and add spacing */
     }
-
+    .about-me h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    .about-me p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #bac8d3;
+    }
+    .about-me .btn-1,
+    .about-me .btn-2 {
+        display: inline-block;
+        margin: 10px 5px;
+        padding: 10px 20px;
+        font-size: 14px;
+        text-decoration: none;
+        border-radius: 30px;
+    }
     .about-me .btn-1 {
-        margin-bottom: 30px;
+        background: #e0a80d;
+        color: #fff;
+    }
+    .about-me .btn-2 {
+        border: 2px solid #e0a80d;
+        color: #fff;
     }
 
-    .some-facts .items h4 {
-        margin-bottom: 30px;
+    /* Services */
+    .services {
+        padding: 60px 20px;
     }
-
-    .blog .box {
-        margin-bottom: 30px;
+    .services h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
     }
-
-    .contact .info {
-        padding: 0;
+    .services .box {
+        padding: 20px;
+        margin-bottom: 20px;
+        background: #212222;
+        border-radius: 10px;
         text-align: center;
-        margin-top: 40px;
+    }
+    .services .box h3 {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    .services .box p {
+        font-size: 14px;
+    }
+
+    /* Contact */
+    .contact {
+        padding: 40px 20px;
+        text-align: center;
+    }
+    .contact h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .contact .form-control {
+        padding: 15px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+    .contact button.btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+        background: #e0a80d;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
     }
 }
 
-/* Small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) {
-
-    /* Slider*/
-    .slider {
-        height: calc(100vh - 80px);
-        margin-top: 80px;
+/* General Styles for Tablets and Small Laptops (< 992px) */
+@media (max-width: 991.98px) {
+    /* Navbar */
+    .navbar {
+        padding: 20px;
     }
-
-    .slider .left-content {
-        padding: 0;
-        margin: 0;
-    }
-
-    .animated-headlines .cd-headline span {
-        font-size: 30px;
+    .navbar .nav-item {
+        font-size: 14px;
+        margin: 5px 0;
     }
 
     /* About Me */
+    .about-me {
+        padding: 80px 40px;
+    }
     .about-me img {
-        padding: 0;
-        margin-bottom: 30px;
+        max-width: 100%;
     }
 
-    .some-facts .items h4 {
-        margin-bottom: 30px;
+    /* Slider */
+    .slider {
+        height: calc(80vh - 60px);
     }
 
-    .blog .box {
-        margin-bottom: 30px;
+    /* Services */
+    .services {
+        padding: 80px 40px;
+    }
+    .services h2 {
+        font-size: 28px;
     }
 
-    .contact .info {
-        padding: 0;
-        text-align: center;
-        margin-top: 40px;
+    /* Contact */
+    .contact {
+        padding: 60px 40px;
     }
 }
 
-/* Medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) {
-    .animated-headlines .cd-headline span {
-        font-size: 30px;
+/* General Styles for Larger Screens (< 1200px) */
+@media (max-width: 1199.98px) {
+    /* About Me */
+    .about-me {
+        padding: 100px 60px;
     }
-
-    .slider .left-content {
-        padding: 140px 0;
-    }
-
-    .some-facts .items h4 {
-        margin-bottom: 30px;
-    }
-
-    .blog .box {
-        margin-bottom: 30px;
-    }
-
-    .blog {
-        padding-bottom: 90px;
-    }
-
     .about-me img {
-        display: none;
+        max-width: 90%;
+    }
+
+    /* Slider */
+    .slider {
+        height: calc(90vh - 70px);
     }
 }
-
-
-/* Large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) {}
