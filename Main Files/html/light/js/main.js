@@ -2,7 +2,7 @@ $(function () {
     'use strict';
 
     // Initialize Isotope (for filtering)
-    $('#container').imagesLoaded(function () {
+    $('.grid').imagesLoaded(function () {
         var $grid = $('.grid').isotope({
             itemSelector: '.grid-item',
             layoutMode: 'fitRows'
@@ -12,6 +12,12 @@ $(function () {
         $('.filter-button-group').on('click', 'button', function () {
             var filterValue = $(this).attr('data-filter');
             $grid.isotope({ filter: filterValue });
+        });
+
+        // Add active class to the current button
+        $('.filter-button-group').on('click', 'button', function () {
+            $('.filter-button-group button').removeClass('active');
+            $(this).addClass('active');
         });
     });
 
@@ -23,3 +29,4 @@ $(function () {
         delay: 10,
         time: 3000
     });
+});
