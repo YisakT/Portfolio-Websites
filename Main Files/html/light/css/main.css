@@ -597,12 +597,10 @@ body {
 
 
 /* ==========================
-   [11]. Media
+   [11]. Media (Responsive Design)
 ========================== */
-/*Small devices (landscape phones, 576px and up) */
-/* Modern Responsive Design */
 
-/* General Styles for Small Screens (Phones, < 576px) */
+/* Small Devices (Phones, < 576px) */
 @media (max-width: 575.98px) {
     /* Navbar */
     .navbar {
@@ -631,8 +629,9 @@ body {
         text-align: center; /* Center-align content for a clean layout */
     }
     .about-me img {
-        display: block;
+        display: block; /* Ensure the image is visible */
         max-width: 80%; /* Ensure the image is responsive */
+        height: auto; /* Maintain aspect ratio */
         margin: 0 auto 20px; /* Center image and add spacing */
     }
     .about-me h2 {
@@ -643,15 +642,17 @@ body {
         font-size: 16px;
         line-height: 1.6;
         color: #bac8d3;
+        margin-bottom: 20px;
     }
     .about-me .btn-1,
     .about-me .btn-2 {
-        display: inline-block;
-        margin: 10px 5px;
-        padding: 10px 20px;
+        display: block; /* Stack buttons vertically */
+        width: 100%; /* Full width for smaller screens */
+        margin: 10px 0; /* Add vertical spacing */
+        padding: 12px;
         font-size: 14px;
-        text-decoration: none;
         border-radius: 30px;
+        text-decoration: none;
     }
     .about-me .btn-1 {
         background: #e0a80d;
@@ -726,7 +727,19 @@ body {
         padding: 80px 40px;
     }
     .about-me img {
-        max-width: 100%;
+        max-width: 100%; /* Ensure image scales properly */
+        height: auto; /* Maintain aspect ratio */
+        margin: 0 auto 20px; /* Center and add spacing */
+    }
+    .about-me p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+    .about-me .btn-1,
+    .about-me .btn-2 {
+        display: inline-block; /* Buttons inline by default */
+        margin: 10px 5px;
     }
 
     /* Slider */
@@ -750,12 +763,18 @@ body {
 
 /* General Styles for Larger Screens (< 1200px) */
 @media (max-width: 1199.98px) {
+    /* Navbar */
+    .navbar {
+        padding: 20px;
+    }
+
     /* About Me */
     .about-me {
         padding: 100px 60px;
     }
     .about-me img {
-        max-width: 90%;
+        max-width: 90%; /* Ensure the image is responsive */
+        height: auto; /* Maintain aspect ratio */
     }
 
     /* Slider */
