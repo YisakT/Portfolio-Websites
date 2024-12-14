@@ -146,8 +146,29 @@ body {
     background: #2d2e2e;
 }
 
-.about-me img {
+.about-me .container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.about-me .row {
+    display: flex;
+    width: 100%;
+}
+
+.about-me .col-md-5 {
+    flex: 0 0 40%;
     padding-right: 50px;
+}
+
+.about-me .col-md-7 {
+    flex: 1;
+}
+
+.about-me img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .about-me h2 {
@@ -173,6 +194,7 @@ body {
     font-weight: 500;
     margin-right: 10px;
     text-decoration: none;
+    display: inline-block;
 }
 
 .about-me .btn-2 {
@@ -183,9 +205,8 @@ body {
     color: #ffffff;
     font-weight: 500;
     text-decoration: none;
+    display: inline-block;
 }
-
-
 
 /* ==========================
    [04]. Services
@@ -294,30 +315,46 @@ body {
 
 /* General button styles */
 .portfolio .button-group button {
-    border: none; /* No border */
-    background: transparent; /* Transparent background by default */
-    font-size: 15px; /* Adjust font size */
-    font-weight: 600; /* Make text bold */
-    margin-right: 10px; /* Add spacing between buttons */
-    padding: 10px 20px; /* Add padding for clickable area */
-    color: #bac8d3; /* Default text color */
-    text-transform: uppercase; /* Make text uppercase */
-    cursor: pointer; /* Pointer cursor on hover */
-    border-radius: 35px; /* Rounded corners */
-    transition: all 0.3s ease-in-out; /* Smooth transitions for hover and active states */
+    border: none;
+    /* No border */
+    background: transparent;
+    /* Transparent background by default */
+    font-size: 15px;
+    /* Adjust font size */
+    font-weight: 600;
+    /* Make text bold */
+    margin-right: 10px;
+    /* Add spacing between buttons */
+    padding: 10px 20px;
+    /* Add padding for clickable area */
+    color: #bac8d3;
+    /* Default text color */
+    text-transform: uppercase;
+    /* Make text uppercase */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    border-radius: 35px;
+    /* Rounded corners */
+    transition: all 0.3s ease-in-out;
+    /* Smooth transitions for hover and active states */
 }
 
 /* Button hover effect */
 .portfolio .button-group button:hover {
-    color: #ffffff; /* White text on hover */
-    background: #e0a80d; /* Yellow background on hover */
+    color: #ffffff;
+    /* White text on hover */
+    background: #e0a80d;
+    /* Yellow background on hover */
 }
 
 /* Active button style */
 .portfolio .button-group button.active {
-    color: #ffffff; /* White text for active button */
-    background: #e0a80d; /* Yellow background for active button */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow to indicate active state */
+    color: #ffffff;
+    /* White text for active button */
+    background: #e0a80d;
+    /* Yellow background for active button */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow to indicate active state */
 }
 
 
@@ -608,117 +645,140 @@ body {
 
 /* Small Devices (Phones, < 576px) */
 @media (max-width: 575.98px) {
+
     /* Navbar */
     .navbar {
         padding: 15px;
         background: #2b2c2c;
     }
+
     .navbar .nav-item {
-        margin: 10px 0; /* Stack items vertically */
-        font-size: 16px; /* Larger font for readability */
+        margin: 10px 0;
+        /* Stack items vertically */
+        font-size: 16px;
+        /* Larger font for readability */
     }
 
     /* Slider */
     .slider {
-        height: auto; /* Automatically adjust for content */
+        height: auto;
+        /* Automatically adjust for content */
         padding: 20px;
         margin-top: 50px;
-        background-position: center; /* Ensure proper background alignment */
+        background-position: center;
+        /* Ensure proper background alignment */
     }
+
     .slider .animated-headlines .cd-headline span {
         font-size: 24px;
     }
 
     /* About Me */
     .about-me {
-    padding: 60px 20px;
-    display: flex; /* Ensure the content aligns properly */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    gap: 20px; /* Add spacing between image and text */
-}
-
-.about-me .col-md-5, 
-.about-me .col-md-7 {
-    display: flex;
-    align-items: center; /* Vertically align content */
-}
-
-.about-me .col-md-5 {
-    flex: 1 1 50%; /* Image takes 50% of the width */
-    max-width: 50%; /* Prevent the column from exceeding half the width */
-}
-
-.about-me img {
-    width: 100%; /* Ensure the image fills its container */
-    height: 100%; /* Match the height of the adjacent text */
-    object-fit: cover; /* Maintain the aspect ratio and crop if necessary */
-    border-radius: 10px; /* Optional: Rounded corners for a polished look */
-}
-
-.about-me .col-md-7 {
-    flex: 1 1 50%; /* Text takes 50% of the width */
-    max-width: 50%; /* Prevent the column from exceeding half the width */
-}
-
-.about-me h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.about-me p {
-    font-size: 16px;
-    line-height: 1.6;
-    text-align: justify;
-    color: #bac8d3;
-    margin-bottom: 20px;
-}
-
-.about-me .btn-1,
-.about-me .btn-2 {
-    display: inline-block;
-    margin: 10px 5px;
-    padding: 12px 20px;
-    font-size: 14px;
-    text-align: center;
-    border-radius: 30px;
-    text-decoration: none;
-}
-
-.about-me .btn-1 {
-    background: #e0a80d;
-    color: #fff;
-}
-
-.about-me .btn-2 {
-    border: 2px solid #e0a80d;
-    color: #fff;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 991.98px) {
-    .about-me {
+        padding: 60px 20px;
+        display: flex;
+        /* Ensure the content aligns properly */
         flex-wrap: wrap;
+        /* Allow wrapping on smaller screens */
+        gap: 20px;
+        /* Add spacing between image and text */
     }
 
     .about-me .col-md-5,
     .about-me .col-md-7 {
-        flex: 1 1 100%; /* Each section takes full width on smaller screens */
-        max-width: 100%;
+        display: flex;
+        align-items: center;
+        /* Vertically align content */
+    }
+
+    .about-me .col-md-5 {
+        flex: 1 1 50%;
+        /* Image takes 50% of the width */
+        max-width: 50%;
+        /* Prevent the column from exceeding half the width */
     }
 
     .about-me img {
-        height: auto; /* Allow natural height on smaller screens */
+        width: 100%;
+        /* Ensure the image fills its container */
+        height: 100%;
+        /* Match the height of the adjacent text */
+        object-fit: cover;
+        /* Maintain the aspect ratio and crop if necessary */
+        border-radius: 10px;
+        /* Optional: Rounded corners for a polished look */
     }
-}
+
+    .about-me .col-md-7 {
+        flex: 1 1 50%;
+        /* Text takes 50% of the width */
+        max-width: 50%;
+        /* Prevent the column from exceeding half the width */
+    }
+
+    .about-me h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .about-me p {
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: justify;
+        color: #bac8d3;
+        margin-bottom: 20px;
+    }
+
+    .about-me .btn-1,
+    .about-me .btn-2 {
+        display: inline-block;
+        margin: 10px 5px;
+        padding: 12px 20px;
+        font-size: 14px;
+        text-align: center;
+        border-radius: 30px;
+        text-decoration: none;
+    }
+
+    .about-me .btn-1 {
+        background: #e0a80d;
+        color: #fff;
+    }
+
+    .about-me .btn-2 {
+        border: 2px solid #e0a80d;
+        color: #fff;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 991.98px) {
+        .about-me {
+            flex-wrap: wrap;
+        }
+
+        .about-me .col-md-5,
+        .about-me .col-md-7 {
+            flex: 1 1 100%;
+            /* Each section takes full width on smaller screens */
+            max-width: 100%;
+        }
+
+        .about-me img {
+            height: auto;
+            /* Allow natural height on smaller screens */
+        }
+    }
 
     /* Services */
     .services {
         padding: 60px 20px;
     }
+
     .services h2 {
         font-size: 24px;
         margin-bottom: 20px;
     }
+
     .services .box {
         padding: 20px;
         margin-bottom: 20px;
@@ -726,10 +786,12 @@ body {
         border-radius: 10px;
         text-align: center;
     }
+
     .services .box h3 {
         font-size: 18px;
         margin: 10px 0;
     }
+
     .services .box p {
         font-size: 14px;
     }
@@ -739,15 +801,18 @@ body {
         padding: 40px 20px;
         text-align: center;
     }
+
     .contact h2 {
         font-size: 24px;
         margin-bottom: 20px;
     }
+
     .contact .form-control {
         padding: 15px;
         margin-bottom: 10px;
         font-size: 14px;
     }
+
     .contact button.btn {
         width: 100%;
         padding: 12px;
@@ -761,10 +826,12 @@ body {
 
 /* General Styles for Tablets and Small Laptops (< 992px) */
 @media (max-width: 991.98px) {
+
     /* Navbar */
     .navbar {
         padding: 20px;
     }
+
     .navbar .nav-item {
         font-size: 14px;
         margin: 5px 0;
@@ -774,19 +841,26 @@ body {
     .about-me {
         padding: 80px 40px;
     }
+
     .about-me img {
-        max-width: 100%; /* Ensure image scales properly */
-        height: auto; /* Maintain aspect ratio */
-        margin: 0 auto 20px; /* Center and add spacing */
+        max-width: 100%;
+        /* Ensure image scales properly */
+        height: auto;
+        /* Maintain aspect ratio */
+        margin: 0 auto 20px;
+        /* Center and add spacing */
     }
+
     .about-me p {
         font-size: 16px;
         line-height: 1.6;
         margin-bottom: 20px;
     }
+
     .about-me .btn-1,
     .about-me .btn-2 {
-        display: inline-block; /* Buttons inline by default */
+        display: inline-block;
+        /* Buttons inline by default */
         margin: 10px 5px;
     }
 
@@ -799,6 +873,7 @@ body {
     .services {
         padding: 80px 40px;
     }
+
     .services h2 {
         font-size: 28px;
     }
@@ -811,6 +886,7 @@ body {
 
 /* General Styles for Larger Screens (< 1200px) */
 @media (max-width: 1199.98px) {
+
     /* Navbar */
     .navbar {
         padding: 20px;
@@ -820,9 +896,12 @@ body {
     .about-me {
         padding: 100px 60px;
     }
+
     .about-me img {
-        max-width: 90%; /* Ensure the image is responsive */
-        height: auto; /* Maintain aspect ratio */
+        max-width: 90%;
+        /* Ensure the image is responsive */
+        height: auto;
+        /* Maintain aspect ratio */
     }
 
     /* Slider */
