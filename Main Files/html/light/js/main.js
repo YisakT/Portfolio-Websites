@@ -1,5 +1,13 @@
 $(function () {
     'use strict';
+    // Preloader - Hide after page load
+$(window).on('load', function () {
+    $('#preloader').fadeOut('slow', function () {
+        $(this).remove(); // Optional: remove the element from DOM
+    });
+});
+
+
 
     // Initialize Isotope (for filtering)
     $('.grid').imagesLoaded(function () {
